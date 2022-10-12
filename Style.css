@@ -1,0 +1,14 @@
+table, th, td {
+    border-collapse: collapse;
+  }
+.tableI {    
+    width: 20%;
+}
+.tableII{    
+    width: 75%;
+}
+.Titulo {       
+    text-align: center;
+}
+
+
