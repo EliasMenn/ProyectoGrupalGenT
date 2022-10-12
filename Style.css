@@ -1,14 +1,63 @@
 table, th, td {
     border-collapse: collapse;
   }
-.tableI {    
-    width: 20%;
+.nos {    
+    width: 25%;
 }
-.tableII{    
-    width: 75%;
+.tableI{    
+    width: 100%;
 }
 .Titulo {       
     text-align: center;
 }
 
+.cabecera { grid-area: header; }
+.costadoI { grid-area: menu; }
+.centro { grid-area: main; }
+.costadoD { grid-area: right; }
+.cierre { grid-area: footer; }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  gap: 0px;
+  background-color: powderblue;
+  padding: 0px;
+}
+.grid-container > div {
+    background-color: lightslategray;
+    text-align: center;
+    padding: 0px 0;
+    font-size: 30px;
+    gap: 0px 0px;
+  }
+  .cabecera {   
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .costadoI  {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .centro { 
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 6;
+  }
+  .costadoD { 
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+  .cierre { 
+    text-align: center;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end:  6;
+}
 
