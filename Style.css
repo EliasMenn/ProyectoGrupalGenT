@@ -2,7 +2,12 @@ table, th, td {
     border-collapse: collapse;
   }
 .nos {    
-    width: 25%;
+    width: 40%;
+    text-align: justify;
+}
+.menu { 
+ width: 25%;
+ text-align: left;
 }
 .tableI{    
     width: 100%;
@@ -10,7 +15,9 @@ table, th, td {
 .Titulo {       
     text-align: center;
 }
-
+* {
+  box-sizing: border-box;
+}
 .cabecera { grid-area: header; }
 .costadoI { grid-area: menu; }
 .centro { grid-area: main; }
@@ -27,7 +34,7 @@ table, th, td {
   padding: 0px;
 }
 .grid-container > div {
-    background-color: lightslategray;
+    background-color: powderblue;
     text-align: center;
     padding: 0px 0;
     font-size: 30px;
@@ -35,29 +42,63 @@ table, th, td {
   }
   .cabecera {   
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 6;
   }
   .costadoI  {
     grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 1;
+    grid-row-end: 4;
+    grid-column-end: 2;
   }
   .centro { 
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
-    grid-column-end: 6;
+    grid-column-end: 7;
   }
   .costadoD { 
+    grid-row-start: 1;
+    grid-row-end: 1;
     grid-column-start: 5;
-    grid-column-end: 6;
+    grid-column-end: 7;
 }
   .cierre { 
     text-align: center;
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
-    grid-column-end:  6;
+    grid-column-end:  7;
+}
+.dropdown {
+  display: inline-block;
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  min-height: 320px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media screen and (max-width: 800px) {
+  .menu { width: 25%; }
+  
+  .nos {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .costadoI {
+    grid-row-start:2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+  .centro {
+    grid-row-start:3;
+
+  }
+}
